@@ -22,8 +22,8 @@ class Config(object):
     TG_MAX_FILE_SIZE = 2097152000
     FREE_USER_MAX_FILE_SIZE = 50000000
     # database url
-    DATABASE_URL = mongodb+srv://Tamilbots:tamilbots@cluster0.aa2e1nd.mongodb.net/?retryWrites=true&w=majority
-    SESSION_NAME = Tamilbots
+    DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://Tamilbots:tamilbots@cluster0.aa2e1nd.mongodb.net/?retryWrites=true&w=majority
+    SESSION_NAME = Tamilbots") 
     # chunk size that should be used with requests
     CHUNK_SIZE = int(os.environ.get("CHUNK_SIZE", 128))
     # default thumbnail to be used in the videos
